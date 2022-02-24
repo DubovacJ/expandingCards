@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>expanding cards</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="panel active"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1643582328200-8f6dfec87560?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        "
+      >
+        <h3>explore the world</h3>
+      </div>
+      <div
+        class="panel"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1643607656651-121c76aa6ed5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        "
+      >
+        <h3>sunny bitch</h3>
+      </div>
+      <div
+        class="panel"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1643635584824-993e275ef1ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        "
+      >
+        <h3>winter chaos</h3>
+      </div>
+
+      <div
+        class="panel"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1643474833931-6a503050fbd2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        "
+      >
+        <h3>autumn breeze</h3>
+      </div>
+
+      <div
+        class="panel"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1643577999708-ec630df73a7b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80');
+        "
+      >
+        <h3>footbal jouninho</h3>
+      </div>
+    </div>
+    <script>
+      const panels = document.querySelectorAll(".panel");
+
+      panels.forEach((panel) => {
+        panel.addEventListener("click", () => {
+          removeClassList();
+          panel.classList.add("active");
+        });
+      });
+      function removeClassList() {
+        panels.forEach((panel) => {
+          panel.classList.remove("active");
+        });
+      }
+    </script>
+  </body>
+</html>
